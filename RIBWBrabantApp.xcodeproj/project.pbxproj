@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80D89CA91A8A539C001367C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89CA81A8A539C001367C8 /* main.m */; };
+		80D89CAC1A8A539C001367C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89CAB1A8A539C001367C8 /* AppDelegate.m */; };
+		80D89CB21A8A539C001367C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D89CB01A8A539C001367C8 /* Main.storyboard */; };
+		80D89CB41A8A539C001367C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D89CB31A8A539C001367C8 /* Images.xcassets */; };
+		80D89CB71A8A539C001367C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D89CB51A8A539C001367C8 /* LaunchScreen.xib */; };
+		80D89CC31A8A539C001367C8 /* RIBWBrabantAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89CC21A8A539C001367C8 /* RIBWBrabantAppTests.m */; };
+		80E092721A8E06D800316AC1 /* NieuwsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E092711A8E06D800316AC1 /* NieuwsItem.m */; };
+		80F0AAF31A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F0AAF21A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m */; };
+		80F0AAF61A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F0AAF51A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m */; };
+		80F0AAF91A8CFDF7007CC1A5 /* HTTPRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F0AAF81A8CFDF7007CC1A5 /* HTTPRequestFactory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80D89CBD1A8A539C001367C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80D89C9B1A8A539B001367C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80D89CA21A8A539C001367C8;
+			remoteInfo = RIBWBrabantApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80D89CA31A8A539C001367C8 /* RIBWBrabantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIBWBrabantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D89CA71A8A539C001367C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D89CA81A8A539C001367C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80D89CAA1A8A539C001367C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80D89CAB1A8A539C001367C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80D89CB11A8A539C001367C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80D89CB31A8A539C001367C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		80D89CB61A8A539C001367C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		80D89CBC1A8A539C001367C8 /* RIBWBrabantAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIBWBrabantAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D89CC11A8A539C001367C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D89CC21A8A539C001367C8 /* RIBWBrabantAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIBWBrabantAppTests.m; sourceTree = "<group>"; };
+		80E092701A8E06D800316AC1 /* NieuwsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NieuwsItem.h; sourceTree = "<group>"; };
+		80E092711A8E06D800316AC1 /* NieuwsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NieuwsItem.m; sourceTree = "<group>"; };
+		80F0AAF11A8CF9CB007CC1A5 /* NieuwslijstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NieuwslijstTableViewController.h; sourceTree = "<group>"; };
+		80F0AAF21A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NieuwslijstTableViewController.m; sourceTree = "<group>"; };
+		80F0AAF41A8CFB04007CC1A5 /* NieuwslijstTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NieuwslijstTableViewCell.h; sourceTree = "<group>"; };
+		80F0AAF51A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NieuwslijstTableViewCell.m; sourceTree = "<group>"; };
+		80F0AAF71A8CFDF7007CC1A5 /* HTTPRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequestFactory.h; sourceTree = "<group>"; };
+		80F0AAF81A8CFDF7007CC1A5 /* HTTPRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequestFactory.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80D89CA01A8A539C001367C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D89CB91A8A539C001367C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80D89C9A1A8A539B001367C8 = {
+			isa = PBXGroup;
+			children = (
+				80D89CA51A8A539C001367C8 /* RIBWBrabantApp */,
+				80D89CBF1A8A539C001367C8 /* RIBWBrabantAppTests */,
+				80D89CA41A8A539C001367C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80D89CA41A8A539C001367C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80D89CA31A8A539C001367C8 /* RIBWBrabantApp.app */,
+				80D89CBC1A8A539C001367C8 /* RIBWBrabantAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80D89CA51A8A539C001367C8 /* RIBWBrabantApp */ = {
+			isa = PBXGroup;
+			children = (
+				80E092701A8E06D800316AC1 /* NieuwsItem.h */,
+				80E092711A8E06D800316AC1 /* NieuwsItem.m */,
+				80F0AAF71A8CFDF7007CC1A5 /* HTTPRequestFactory.h */,
+				80F0AAF81A8CFDF7007CC1A5 /* HTTPRequestFactory.m */,
+				80D89CAA1A8A539C001367C8 /* AppDelegate.h */,
+				80D89CAB1A8A539C001367C8 /* AppDelegate.m */,
+				80D89CB01A8A539C001367C8 /* Main.storyboard */,
+				80F0AAF41A8CFB04007CC1A5 /* NieuwslijstTableViewCell.h */,
+				80F0AAF51A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m */,
+				80D89CB31A8A539C001367C8 /* Images.xcassets */,
+				80D89CB51A8A539C001367C8 /* LaunchScreen.xib */,
+				80D89CA61A8A539C001367C8 /* Supporting Files */,
+				80F0AAF11A8CF9CB007CC1A5 /* NieuwslijstTableViewController.h */,
+				80F0AAF21A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m */,
+			);
+			path = RIBWBrabantApp;
+			sourceTree = "<group>";
+		};
+		80D89CA61A8A539C001367C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80D89CA71A8A539C001367C8 /* Info.plist */,
+				80D89CA81A8A539C001367C8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80D89CBF1A8A539C001367C8 /* RIBWBrabantAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				80D89CC21A8A539C001367C8 /* RIBWBrabantAppTests.m */,
+				80D89CC01A8A539C001367C8 /* Supporting Files */,
+			);
+			path = RIBWBrabantAppTests;
+			sourceTree = "<group>";
+		};
+		80D89CC01A8A539C001367C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80D89CC11A8A539C001367C8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80D89CA21A8A539C001367C8 /* RIBWBrabantApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D89CC61A8A539C001367C8 /* Build configuration list for PBXNativeTarget "RIBWBrabantApp" */;
+			buildPhases = (
+				80D89C9F1A8A539C001367C8 /* Sources */,
+				80D89CA01A8A539C001367C8 /* Frameworks */,
+				80D89CA11A8A539C001367C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RIBWBrabantApp;
+			productName = RIBWBrabantApp;
+			productReference = 80D89CA31A8A539C001367C8 /* RIBWBrabantApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80D89CBB1A8A539C001367C8 /* RIBWBrabantAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80D89CC91A8A539C001367C8 /* Build configuration list for PBXNativeTarget "RIBWBrabantAppTests" */;
+			buildPhases = (
+				80D89CB81A8A539C001367C8 /* Sources */,
+				80D89CB91A8A539C001367C8 /* Frameworks */,
+				80D89CBA1A8A539C001367C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80D89CBE1A8A539C001367C8 /* PBXTargetDependency */,
+			);
+			name = RIBWBrabantAppTests;
+			productName = RIBWBrabantAppTests;
+			productReference = 80D89CBC1A8A539C001367C8 /* RIBWBrabantAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80D89C9B1A8A539B001367C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = CERIUM;
+				TargetAttributes = {
+					80D89CA21A8A539C001367C8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					80D89CBB1A8A539C001367C8 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 80D89CA21A8A539C001367C8;
+					};
+				};
+			};
+			buildConfigurationList = 80D89C9E1A8A539B001367C8 /* Build configuration list for PBXProject "RIBWBrabantApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80D89C9A1A8A539B001367C8;
+			productRefGroup = 80D89CA41A8A539C001367C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80D89CA21A8A539C001367C8 /* RIBWBrabantApp */,
+				80D89CBB1A8A539C001367C8 /* RIBWBrabantAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80D89CA11A8A539C001367C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D89CB21A8A539C001367C8 /* Main.storyboard in Resources */,
+				80D89CB71A8A539C001367C8 /* LaunchScreen.xib in Resources */,
+				80D89CB41A8A539C001367C8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D89CBA1A8A539C001367C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80D89C9F1A8A539C001367C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F0AAF91A8CFDF7007CC1A5 /* HTTPRequestFactory.m in Sources */,
+				80D89CAC1A8A539C001367C8 /* AppDelegate.m in Sources */,
+				80F0AAF61A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m in Sources */,
+				80E092721A8E06D800316AC1 /* NieuwsItem.m in Sources */,
+				80F0AAF31A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m in Sources */,
+				80D89CA91A8A539C001367C8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80D89CB81A8A539C001367C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D89CC31A8A539C001367C8 /* RIBWBrabantAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80D89CBE1A8A539C001367C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80D89CA21A8A539C001367C8 /* RIBWBrabantApp */;
+			targetProxy = 80D89CBD1A8A539C001367C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80D89CB01A8A539C001367C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80D89CB11A8A539C001367C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80D89CB51A8A539C001367C8 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80D89CB61A8A539C001367C8 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80D89CC41A8A539C001367C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		80D89CC51A8A539C001367C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80D89CC71A8A539C001367C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RIBWBrabantApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80D89CC81A8A539C001367C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RIBWBrabantApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80D89CCA1A8A539C001367C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RIBWBrabantAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RIBWBrabantApp.app/RIBWBrabantApp";
+			};
+			name = Debug;
+		};
+		80D89CCB1A8A539C001367C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RIBWBrabantAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RIBWBrabantApp.app/RIBWBrabantApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80D89C9E1A8A539B001367C8 /* Build configuration list for PBXProject "RIBWBrabantApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D89CC41A8A539C001367C8 /* Debug */,
+				80D89CC51A8A539C001367C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D89CC61A8A539C001367C8 /* Build configuration list for PBXNativeTarget "RIBWBrabantApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D89CC71A8A539C001367C8 /* Debug */,
+				80D89CC81A8A539C001367C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80D89CC91A8A539C001367C8 /* Build configuration list for PBXNativeTarget "RIBWBrabantAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D89CCA1A8A539C001367C8 /* Debug */,
+				80D89CCB1A8A539C001367C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80D89C9B1A8A539B001367C8 /* Project object */;
+}
