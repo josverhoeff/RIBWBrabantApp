@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AAF-FC-Wfr">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
@@ -34,7 +35,7 @@
         <!--Item-->
         <scene sceneID="9FQ-3P-Jbt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TR1-I9-EG6" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TR1-I9-EG6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="8nV-0U-rnL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jDJ-7Q-MSg">
@@ -50,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="1117" y="435"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Root View Controller-->
         <scene sceneID="2SF-BE-M51">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AAF-FC-Wfr" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AAF-FC-Wfr" customClass="RootViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YH0-Vv-MkZ">

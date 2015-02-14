@@ -1,6 +1,6 @@
 //
-//  AVNNewsItem.h
-//  AVN
+//  NieuwsItem.h
+//
 //
 //  Created by Marten Tamerius on 21-05-14.
 //  Adapted by Jos Verhoeff
@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <Mantle.h>
 
-@interface AVNNewsItem : MTLModel <MTLJSONSerializing>
+@interface NieuwsItem : MTLModel <MTLJSONSerializing>
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSDate *date;

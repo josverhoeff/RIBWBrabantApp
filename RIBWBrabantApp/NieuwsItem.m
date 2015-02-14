@@ -1,14 +1,14 @@
 //
-//  AVNNewsItem.m
+//  NieuwsItem.m
 //  AVN
 //
 //  Created by Marten Tamerius on 21-05-14.
 //  Copyright (c) 2014 AVN. All rights reserved.
 //
 
-#import "AVNNewsItem.h"
+#import "NieuwsItem.h"
 
-@implementation AVNNewsItem
+@implementation NieuwsItem
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey
 {

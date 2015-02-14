@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NieuwslijstTableViewCell : UITableViewCell
-
+- (void)setUnread:(BOOL)unread;
+- (void)setThumbnail:(UIImage *)thumbnail;
+- (void)setTitle:(NSString *)title;
+- (void)setSubtitle:(NSString *)subtitle;
 @end

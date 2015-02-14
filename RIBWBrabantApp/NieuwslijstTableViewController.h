@@ -6,12 +6,14 @@
 //  Copyright (c) 2015 CERIUM. All rights reserved.
 //
 
-#import "HTTPRequestFactory.h"
-#import "NieuwsItem.h"
-#import "NieuwslijstTableViewCell.h"
-//#import "NiewsItemDetailViewController.h"
-#import <UIKit/UIKit.h>
 
+
+#import <UIKit/UIKit.h>
 @interface NieuwslijstTableViewController : UITableViewController
+
+@property (nonatomic, strong) NSMutableArray *newsItemsList;
+
+- (void)pushNewsItemWithIdentifier:(NSString *)identifier;
+
 
 @end
