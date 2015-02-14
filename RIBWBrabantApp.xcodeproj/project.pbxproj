@@ -10,6 +10,7 @@
 		43D442A9E11A73E45A100EED /* libPods-RIBWBrabantApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A5424D5F55DA4BE9A35A47 /* libPods-RIBWBrabantApp.a */; };
 		7A4B47479E29A1A0B8B1F633 /* libPods-RIBWBrabantAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCB05CAAE8880CB04A60926 /* libPods-RIBWBrabantAppTests.a */; };
 		80B306681A8F8B9300DDCFB9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B306671A8F8B9300DDCFB9 /* RootViewController.m */; };
+		80B3066D1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B3066C1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m */; };
 		80D89CA91A8A539C001367C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89CA81A8A539C001367C8 /* main.m */; };
 		80D89CAC1A8A539C001367C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89CAB1A8A539C001367C8 /* AppDelegate.m */; };
 		80D89CB21A8A539C001367C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D89CB01A8A539C001367C8 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		80B306671A8F8B9300DDCFB9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		80B306691A8F90C700DDCFB9 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		80B3066A1A8F90C700DDCFB9 /* Storyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storyboard.h; sourceTree = "<group>"; };
+		80B3066B1A8F989800DDCFB9 /* NieuwsItemDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NieuwsItemDetailViewController.h; sourceTree = "<group>"; };
+		80B3066C1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NieuwsItemDetailViewController.m; sourceTree = "<group>"; };
 		80D89CA31A8A539C001367C8 /* RIBWBrabantApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIBWBrabantApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D89CA71A8A539C001367C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D89CA81A8A539C001367C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				80D89CAA1A8A539C001367C8 /* AppDelegate.h */,
 				80D89CAB1A8A539C001367C8 /* AppDelegate.m */,
 				80D89CB01A8A539C001367C8 /* Main.storyboard */,
+				80B3066B1A8F989800DDCFB9 /* NieuwsItemDetailViewController.h */,
+				80B3066C1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m */,
 				80B306691A8F90C700DDCFB9 /* Prefix.pch */,
 				80B3066A1A8F90C700DDCFB9 /* Storyboard.h */,
 				80F0AAF41A8CFB04007CC1A5 /* NieuwslijstTableViewCell.h */,
@@ -348,6 +353,7 @@
 				80F0AAF61A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m in Sources */,
 				80E092721A8E06D800316AC1 /* NieuwsItem.m in Sources */,
 				80F0AAF31A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m in Sources */,
+				80B3066D1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m in Sources */,
 				80D89CA91A8A539C001367C8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,6 +29,7 @@
 - (void)awakeFromNib
 {
     // Initialization code
+    BOOL b = true;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

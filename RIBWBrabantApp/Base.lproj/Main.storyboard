@@ -14,11 +14,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="h2P-gs-jbT">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="CellNewsItem" selectionStyle="blue" accessoryType="disclosureIndicator" indentationLevel="1" indentationWidth="10" reuseIdentifier="CellNewsItem" id="h2P-gs-jbT" customClass="NieuwslijstTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h2P-gs-jbT" id="Lr1-sL-bSA">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <segue destination="a29-46-Ufz" kind="show" id="2sx-qQ-dl0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,6 +35,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CrU-Lv-C3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1929" y="435"/>
+        </scene>
+        <!--Nieuws Item Detail View Controller-->
+        <scene sceneID="OeO-3c-jyN">
+            <objects>
+                <viewController storyboardIdentifier="NieuwsItemDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a29-46-Ufz" customClass="NieuwsItemDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ray-PW-nZ4"/>
+                        <viewControllerLayoutGuide type="bottom" id="mw4-Yo-5v2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nYO-o8-zni">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NieuwsItemwebview" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-uU-sP4">
+                                <rect key="frame" x="-49" y="-14" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWI-b9-l1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2608" y="450"/>
         </scene>
         <!--Item-->
         <scene sceneID="9FQ-3P-Jbt">

@@ -19,7 +19,7 @@
 #import "HTTPRequestFactory.h"
 #import "NieuwsItem.h"
 #import "NieuwslijstTableViewCell.h"
-//#import "NieuwsItemDetailViewController.h"
+#import "NieuwsItemDetailViewController.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
 #import <AFNetworking.h>
