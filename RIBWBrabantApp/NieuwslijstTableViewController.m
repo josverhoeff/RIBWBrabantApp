@@ -146,9 +146,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NieuwslijstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellNewsItem forIndexPath:indexPath];
+    NieuwsItem *newsItem = self.newsItemsList[indexPath.row];
+
+    //cell.textLabel.text = newsItem.title;
+
     
-    //NieuwsItem *newsItem = self.newsItemsList[indexPath.row];
-    NieuwsItem *newsItem = self.newsItemsList[1];
+    
     [cell setUnread:(!newsItem.hasReadItem)];
     [cell setTitle:newsItem.title];
     [cell setSubtitle:newsItem.shortDescription];

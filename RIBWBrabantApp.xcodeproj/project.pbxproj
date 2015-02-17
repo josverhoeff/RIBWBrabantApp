@@ -132,7 +132,6 @@
 				80B3066A1A8F90C700DDCFB9 /* Storyboard.h */,
 				80F0AAF41A8CFB04007CC1A5 /* NieuwslijstTableViewCell.h */,
 				80F0AAF51A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m */,
-				80D89CB31A8A539C001367C8 /* Images.xcassets */,
 				80D89CB51A8A539C001367C8 /* LaunchScreen.xib */,
 				80D89CA61A8A539C001367C8 /* Supporting Files */,
 				80F0AAF11A8CF9CB007CC1A5 /* NieuwslijstTableViewController.h */,
@@ -146,6 +145,7 @@
 		80D89CA61A8A539C001367C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80D89CB31A8A539C001367C8 /* Images.xcassets */,
 				80D89CA71A8A539C001367C8 /* Info.plist */,
 				80D89CA81A8A539C001367C8 /* main.m */,
 			);

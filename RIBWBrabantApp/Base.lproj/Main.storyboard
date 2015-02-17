@@ -18,10 +18,37 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h2P-gs-jbT" id="Lr1-sL-bSA">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="newsitem_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="tCu-cf-nwQ">
+                                            <rect key="frame" x="30" y="1" width="40" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="blW-Y5-a1A"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LS-Fr-IdG">
+                                            <rect key="frame" x="78" y="3" width="489" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newsitem_unread" translatesAutoresizingMaskIntoConstraints="NO" id="IIW-R8-TQ2">
+                                            <rect key="frame" x="8" y="3" width="19" height="44"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP0-IJ-Ndi">
+                                            <rect key="frame" x="92" y="26" width="489" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
-                                    <segue destination="a29-46-Ufz" kind="show" id="2sx-qQ-dl0"/>
+                                    <outlet property="newsSubtitleLabel" destination="KP0-IJ-Ndi" id="8Fb-y6-COg"/>
+                                    <outlet property="newsTitleLabel" destination="3LS-Fr-IdG" id="NCQ-uK-9R1"/>
+                                    <outlet property="thumbnailImageView" destination="tCu-cf-nwQ" id="K2t-m8-p2J"/>
+                                    <outlet property="unreadDotImageView" destination="IIW-R8-TQ2" id="I3E-iM-IAr"/>
+                                    <segue destination="a29-46-Ufz" kind="show" identifier="NewsItemListToShowDetailSegue" id="Cgq-5c-a6e"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -34,7 +61,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CrU-Lv-C3p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="435"/>
+            <point key="canvasLocation" x="1929" y="421"/>
         </scene>
         <!--Nieuws Item Detail View Controller-->
         <scene sceneID="OeO-3c-jyN">
@@ -49,12 +76,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NieuwsItemwebview" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-uU-sP4">
-                                <rect key="frame" x="-49" y="-14" width="600" height="600"/>
+                                <rect key="frame" x="23" y="64" width="577" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="akJ-uU-sP4" id="2Oe-Vd-ThQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWI-b9-l1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,5 +130,7 @@
     </scenes>
     <resources>
         <image name="NotificationBackgroundSuccessIcon.png" width="21" height="17"/>
+        <image name="newsitem_placeholder" width="44" height="44"/>
+        <image name="newsitem_unread" width="20" height="44"/>
     </resources>
 </document>
