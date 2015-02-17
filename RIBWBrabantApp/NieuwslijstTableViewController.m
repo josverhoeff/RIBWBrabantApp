@@ -27,8 +27,6 @@
 #import <TSMessage.h>
 #import <ODRefreshControl.h>
 
-#define kNewsItemTabBarIndex        1
-#define kDefaultAnimationDuration   0.5
 
 
 @interface NieuwslijstTableViewController ()
@@ -149,7 +147,8 @@
 {
     NieuwslijstTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellNewsItem forIndexPath:indexPath];
     
-    NieuwsItem *newsItem = self.newsItemsList[indexPath.row];
+    //NieuwsItem *newsItem = self.newsItemsList[indexPath.row];
+    NieuwsItem *newsItem = self.newsItemsList[1];
     [cell setUnread:(!newsItem.hasReadItem)];
     [cell setTitle:newsItem.title];
     [cell setSubtitle:newsItem.shortDescription];

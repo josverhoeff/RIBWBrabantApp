@@ -60,11 +60,11 @@
             </objects>
             <point key="canvasLocation" x="2608" y="450"/>
         </scene>
-        <!--Item-->
+        <!--Nieuws-->
         <scene sceneID="9FQ-3P-Jbt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TR1-I9-EG6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="8nV-0U-rnL"/>
+                    <tabBarItem key="tabBarItem" title="Nieuws" image="NotificationBackgroundSuccessIcon.png" id="8nV-0U-rnL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jDJ-7Q-MSg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -98,4 +98,7 @@
             <point key="canvasLocation" x="305" y="435"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NotificationBackgroundSuccessIcon.png" width="21" height="17"/>
+    </resources>
 </document>

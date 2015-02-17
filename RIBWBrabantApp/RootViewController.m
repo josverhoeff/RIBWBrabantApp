@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "AppDelegate.h"
 
-#define kNewsItemTabBarIndex        1
+#define kNewsItemTabBarIndex        0
 #define kDefaultAnimationDuration   0.5
 
 @implementation RootViewController
