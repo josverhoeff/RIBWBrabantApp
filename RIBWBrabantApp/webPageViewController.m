@@ -1,61 +1,59 @@
 //
-//  NieuwsItemDetailViewController.m
+//  webPageViewController.m
 //  RIBWBrabantApp
 //
-//  Created by Jos Verhoeff on 14-02-15.
+//  Created by Jos Verhoeff on 19-02-15.
 //  Copyright (c) 2015 CERIUM. All rights reserved.
 //
 
-#import "NieuwsItemDetailViewController.h"
+#import "webPageViewController.h"
 #import "AppDelegate.h"
 #import "HTTPRequestFactory.h"
 #import <MBProgressHUD.h>
 #import <TSMessage.h>
 
-@interface NieuwsItemDetailViewController () <UIWebViewDelegate>
+@interface webPageViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic) BOOL didLoadPage;
+@property (nonatomic) BOOL didLoadLocalContent;
 @end
 
-@implementation NieuwsItemDetailViewController
-
-#pragma mark - Managing the selected news item
-
-- (void)setSelectedNewsItem:(NieuwsItem *)newSelectedNewsItem
-{
-    if (_selectedNewsItem != newSelectedNewsItem) {
-        _selectedNewsItem = newSelectedNewsItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-    if (self.selectedNewsItem) {
-        // Set page title
-        self.title = self.selectedNewsItem.title;
-        
-        // Refresh webview content
-        NSString *newsItemString = [HTTPRequestFactory urlForNewsItemWithIdentifier:self.selectedNewsItem.identifier];
-        NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:newsItemString]];
-        [self.webView loadRequest:urlRequest];
-    }
-}
+@implementation webPageViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+    
+    self.didLoadPage = NO;
+    self.didLoadLocalContent = NO;
+    
+    [self refreshContent];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (!self.didLoadPage)
+        [self refreshContent];
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Refresh content
+
+- (void)refreshContent
+{
+    // Refresh webview content
+    NSURL *urlAbout = [NSURL URLWithString:[HTTPRequestFactory urlForPage:MyPage_About]];
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:urlAbout];
+
+    [self.webView loadRequest:urlRequest];
 }
 
 
@@ -84,14 +82,17 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         // Log error
-        DLog(@"Error downloading news item detail page: %@, %@", [error localizedDescription], [error userInfo]);
+        DLog(@"Error downloading About page: %@, %@. Trying to load local version.", [error localizedDescription], [error userInfo]);
         
-        // Show error message to user
-        [TSMessage showNotificationInViewController:self title:@"Laden van pagina mislukt."
-                                           subtitle:[error localizedDescription]
-                                               type:TSMessageNotificationTypeError
-                                           duration:5
-                               canBeDismissedByUser:YES];
+        if (!self.didLoadLocalContent) {
+            // Show static local (old) version of about page if it hasn't already been loaded
+            NSString *htmlPath = [[NSBundle mainBundle] pathForResource:@"app_overons" ofType:@"html"];
+            NSURL *localURL = [NSURL fileURLWithPath:htmlPath isDirectory:NO];
+            NSURLRequest *request = [NSURLRequest requestWithURL:localURL cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:5];
+            [webView loadRequest:request];
+            
+            self.didLoadLocalContent = YES;
+        }
     }
 }
 
@@ -104,6 +105,11 @@
     if (hostname && [hostname isEqualToString:kHostname]) {
         
         // Only allow requests directed at the webserver or Google Maps
+        shouldStart = YES;
+        
+    } else if ([request.URL.absoluteString rangeOfString:@"file:///"].location == 0) {
+        
+        // .. or if the request has a local URL (static HTML page on disk)
         shouldStart = YES;
         
     } else {

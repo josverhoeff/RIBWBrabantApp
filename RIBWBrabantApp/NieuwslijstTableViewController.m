@@ -9,10 +9,9 @@
 
 //
 //  NieuwslijstTableViewController.m
-//  AVN
 //
 //  Created by Marten Tamerius on 24-04-14.
-//  Copyright (c) 2014 AVN. All rights reserved.
+//  Copyright (c) 2015 Cerium. All rights reserved.
 //
 
 #import "NieuwslijstTableViewController.h"
@@ -48,6 +47,8 @@
     [refreshControl addTarget:self action:@selector(requestNewsItemsList:) forControlEvents:UIControlEventValueChanged];
     self.newsItemsListRefreshControl = refreshControl;
     [self.tableView setContentOffset:CGPointMake(0.0, (-1*refreshControl.frame.size.height)) animated:NO];
+    // title
+    self.title = @"RIBW Brabant Nieuwtjes";
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -183,7 +184,7 @@
                 }
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                DLog(@"Error downloading AVN news item image: %@, %@", [error localizedDescription], [error userInfo]);
+                DLog(@"Error downloading news item image: %@, %@", [error localizedDescription], [error userInfo]);
             }];
             [[NSOperationQueue mainQueue] addOperation:op];
         });

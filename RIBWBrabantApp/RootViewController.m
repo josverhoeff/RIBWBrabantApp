@@ -16,7 +16,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    // Application-wide tint color (the yellow background from the AVN logo.)
+    // Application-wide tint color (the yellow background from the logo.)
     UIColor *defaultAppTintColor = [UIColor colorWithRed:(231.0f/255) green:(180.0f/255) blue:(43.0f/255) alpha:1.0f];
     
     // Set UITabBar selected image tint color independent of iOS version;

@@ -1,9 +1,8 @@
 //
 //  NieuwsItem.m
-//  AVN
 //
 //  Created by Marten Tamerius on 21-05-14.
-//  Copyright (c) 2014 AVN. All rights reserved.
+//  Copyright (c) 2015 Cerium. All rights reserved.
 //
 
 #import "NieuwsItem.h"

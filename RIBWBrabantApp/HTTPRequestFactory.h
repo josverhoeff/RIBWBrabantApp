@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 // URL stuff
-#define kHostname            @"www.avn.nl"
+#define kHostname            @"www.ribwbrabant.nl"
 #define kRelPageURL          @"app.pagina.aspx"
 #define kRelNewsURL          @"app.nieuwsinfo.aspx"
 

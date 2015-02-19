@@ -52,7 +52,7 @@ static NSArray *_actions, *_pageTypes;
     dispatch_once(&onceToken, ^{
         // Dictionary of page types for kRelPageURL.
         // Used when assembling the URL for the HTTP request. The initialization will happen only once.
-        _pageTypes = @[ @"overons", @"nieuws" ];
+        _pageTypes = @[ @"app_overons", @"app_nieuws" ];
     });
     
     return [_pageTypes objectAtIndex:pageType];

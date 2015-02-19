@@ -17,6 +17,7 @@
 		80D89CB41A8A539C001367C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D89CB31A8A539C001367C8 /* Images.xcassets */; };
 		80D89CB71A8A539C001367C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80D89CB51A8A539C001367C8 /* LaunchScreen.xib */; };
 		80D89CC31A8A539C001367C8 /* RIBWBrabantAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89CC21A8A539C001367C8 /* RIBWBrabantAppTests.m */; };
+		80D8DF231A95EC0500A50949 /* webPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D8DF221A95EC0500A50949 /* webPageViewController.m */; };
 		80E092721A8E06D800316AC1 /* NieuwsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E092711A8E06D800316AC1 /* NieuwsItem.m */; };
 		80F0AAF31A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F0AAF21A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m */; };
 		80F0AAF61A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F0AAF51A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m */; };
@@ -53,6 +54,8 @@
 		80D89CBC1A8A539C001367C8 /* RIBWBrabantAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIBWBrabantAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D89CC11A8A539C001367C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D89CC21A8A539C001367C8 /* RIBWBrabantAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RIBWBrabantAppTests.m; sourceTree = "<group>"; };
+		80D8DF211A95EC0500A50949 /* webPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webPageViewController.h; sourceTree = "<group>"; };
+		80D8DF221A95EC0500A50949 /* webPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webPageViewController.m; sourceTree = "<group>"; };
 		80E092701A8E06D800316AC1 /* NieuwsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NieuwsItem.h; sourceTree = "<group>"; };
 		80E092711A8E06D800316AC1 /* NieuwsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NieuwsItem.m; sourceTree = "<group>"; };
 		80F0AAF11A8CF9CB007CC1A5 /* NieuwslijstTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NieuwslijstTableViewController.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				80D89CAA1A8A539C001367C8 /* AppDelegate.h */,
 				80D89CAB1A8A539C001367C8 /* AppDelegate.m */,
 				80D89CB01A8A539C001367C8 /* Main.storyboard */,
+				80D8DF211A95EC0500A50949 /* webPageViewController.h */,
+				80D8DF221A95EC0500A50949 /* webPageViewController.m */,
 				80B3066B1A8F989800DDCFB9 /* NieuwsItemDetailViewController.h */,
 				80B3066C1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m */,
 				80B306691A8F90C700DDCFB9 /* Prefix.pch */,
@@ -353,6 +358,7 @@
 				80F0AAF61A8CFB04007CC1A5 /* NieuwslijstTableViewCell.m in Sources */,
 				80E092721A8E06D800316AC1 /* NieuwsItem.m in Sources */,
 				80F0AAF31A8CF9CB007CC1A5 /* NieuwslijstTableViewController.m in Sources */,
+				80D8DF231A95EC0500A50949 /* webPageViewController.m in Sources */,
 				80B3066D1A8F989800DDCFB9 /* NieuwsItemDetailViewController.m in Sources */,
 				80D89CA91A8A539C001367C8 /* main.m in Sources */,
 			);

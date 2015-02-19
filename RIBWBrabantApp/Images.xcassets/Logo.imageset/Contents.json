@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "Logo_AVN-320x480.png"
+      "filename" : "Logo-320x480.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Logo_AVN-640x960.png"
+      "filename" : "Logo-640x960.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "Logo_AVN-640x1136.png"
+      "filename" : "Logo-640x1136.png"
     }
   ],
   "info" : {
