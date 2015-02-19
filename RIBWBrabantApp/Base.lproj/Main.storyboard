@@ -115,16 +115,16 @@
         <!--Nieuwsitem-->
         <scene sceneID="OeO-3c-jyN">
             <objects>
-                <viewController storyboardIdentifier="NieuwsItemDetailView" title="Nieuwsitem" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a29-46-Ufz" customClass="NieuwsItemDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NieuwsItemDetailView" title="Nieuwsitem" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a29-46-Ufz" customClass="NieuwsItemDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ray-PW-nZ4"/>
                         <viewControllerLayoutGuide type="bottom" id="mw4-Yo-5v2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nYO-o8-zni">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NieuwsItemwebview" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-uU-sP4">
+                            <webView contentMode="scaleToFill" restorationIdentifier="NieuwsItemwebview" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-uU-sP4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
@@ -132,17 +132,31 @@
                                     <outlet property="delegate" destination="a29-46-Ufz" id="8kT-2Z-fCu"/>
                                 </connections>
                             </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlD-KQ-aag">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zau-l7-QDe">
+                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="tool_previous" id="pxx-xd-1kH"/>
-                                    <barButtonItem image="tool_next" id="ylC-C2-Zfi"/>
+                                    <barButtonItem image="tool_previous" id="pOU-z2-J1j"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Np5-fh-ga9"/>
+                                    <barButtonItem image="tab_news" id="YvQ-ls-vgF"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="c5v-X2-SS6"/>
+                                    <barButtonItem image="tool_next" id="6IS-SD-vK0"/>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="akJ-uU-sP4" secondAttribute="trailing" id="71Q-3J-Yvs"/>
+                            <constraint firstItem="akJ-uU-sP4" firstAttribute="leading" secondItem="nYO-o8-zni" secondAttribute="leading" id="LCK-pi-nxV"/>
+                            <constraint firstAttribute="bottom" secondItem="zau-l7-QDe" secondAttribute="bottom" id="MDC-Tm-ZMD"/>
+                            <constraint firstItem="zau-l7-QDe" firstAttribute="leading" secondItem="akJ-uU-sP4" secondAttribute="leading" id="aFG-a3-tsa"/>
+                            <constraint firstItem="zau-l7-QDe" firstAttribute="trailing" secondItem="akJ-uU-sP4" secondAttribute="trailing" id="hRL-YI-xyf"/>
+                            <constraint firstItem="akJ-uU-sP4" firstAttribute="top" secondItem="ray-PW-nZ4" secondAttribute="bottom" id="i2m-Zs-CvN"/>
+                            <constraint firstAttribute="bottom" secondItem="akJ-uU-sP4" secondAttribute="bottom" id="jsB-aF-pra"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Title" id="dI2-qc-d21"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="akJ-uU-sP4" id="2Oe-Vd-ThQ"/>
                     </connections>

@@ -22,7 +22,7 @@ static NSArray *_actions, *_pageTypes;
 + (NSString *)urlForPage:(MyPageTypes)pageType
 {
     // Assemble the HTTP request string for the kRelPageURL of type "pageType".
-    NSString *urlString = [NSString stringWithFormat:@"http://%@/%@?id=%@", kHostname, kRelPageURL,
+    NSString *urlString = [NSString stringWithFormat:@"https://%@/%@?id=%@", kHostname, kRelPageURL,
                            [HTTPRequestFactory pageTypeStringForAction:pageType] ];
     return urlString;
 }
@@ -31,14 +31,14 @@ static NSArray *_actions, *_pageTypes;
 + (NSString *)urlForNewsItemList
 {
     // Assemble the HTTP request string
-    NSString *urlString = [NSString stringWithFormat:@"http://%@/%@", kHostname, kRelNewsURL];
+    NSString *urlString = [NSString stringWithFormat:@"https://%@/%@", kHostname, kRelNewsURL];
     return urlString;
 }
 
 + (NSString *)urlForNewsItemWithIdentifier:(NSString *)identifier
 {
     // Assemble the HTTP request string
-    NSString *urlString = [NSString stringWithFormat:@"http://%@/%@?id=%@", kHostname, kRelPageURL, identifier];
+    NSString *urlString = [NSString stringWithFormat:@"https://%@/%@?id=%@", kHostname, kRelPageURL, identifier];
     return urlString;
 }
 
