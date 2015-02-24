@@ -11,5 +11,6 @@
 
 
 @interface NieuwsItemDetailViewController : UIViewController
-@property (strong, nonatomic) NieuwsItem *selectedNewsItem;
+@property (nonatomic) int selectedNewsItem;
+@property (nonatomic, strong) NSMutableArray *newsItemsList;
 @end

@@ -14,6 +14,9 @@
 
 @interface NieuwsItemDetailViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *previousBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBarButtonItem;
+
 @property (nonatomic) BOOL didLoadPage;
 @end
 
@@ -21,28 +24,20 @@
 
 #pragma mark - Managing the selected news item
 
-- (void)setSelectedNewsItem:(NieuwsItem *)newSelectedNewsItem
-{
-    if (_selectedNewsItem != newSelectedNewsItem) {
-        _selectedNewsItem = newSelectedNewsItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
-    if (self.selectedNewsItem) {
-        // Set page title
-        self.title = self.selectedNewsItem.title;
-        
-        // Refresh webview content
-        NSString *newsItemString = [HTTPRequestFactory urlForNewsItemWithIdentifier:self.selectedNewsItem.identifier];
-        NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:newsItemString]];
-        [self.webView loadRequest:urlRequest];
-    }
+    // set next and prev button state
+    _previousBarButtonItem.enabled = (self.selectedNewsItem <= 0) ? NO : YES;
+    _nextBarButtonItem.enabled = (self.selectedNewsItem >= _newsItemsList.count-1) ? NO : YES;
+    // Set page title
+    NieuwsItem *thisItem =self.newsItemsList[self.selectedNewsItem];
+    self.title = thisItem.title;
+    // Refresh webview content
+    NSString *newsItemString = [HTTPRequestFactory urlForNewsItemWithIdentifier:thisItem.identifier];
+    NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:newsItemString]];
+    [self.webView loadRequest:urlRequest];
 }
 
 - (void)viewDidLoad
@@ -57,7 +52,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark - Previous, and next buttons
 
+- (IBAction)previousNewsItemTapped:(UIBarButtonItem *)sender
+{
+    self.selectedNewsItem -=1;
+    // Update the view.
+    [self configureView];
+}
+
+- (IBAction)nextNewsItemTapped:(UIBarButtonItem *)sender
+{
+    self.selectedNewsItem +=1;
+    // Update the view.
+    [self configureView];
+}
 
 #pragma mark - UIWebView delegate
 

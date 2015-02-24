@@ -127,6 +127,9 @@
                             <webView contentMode="scaleToFill" restorationIdentifier="NieuwsItemwebview" scalesPageToFit="YES" allowsInlineMediaPlayback="NO" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-uU-sP4">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="zI7-HQ-mBq"/>
+                                </constraints>
                                 <dataDetectorType key="dataDetectorTypes"/>
                                 <connections>
                                     <outlet property="delegate" destination="a29-46-Ufz" id="8kT-2Z-fCu"/>
@@ -135,11 +138,23 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zau-l7-QDe">
                                 <rect key="frame" x="0.0" y="492" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="tool_previous" id="pOU-z2-J1j"/>
+                                    <barButtonItem image="tool_previous" id="pOU-z2-J1j">
+                                        <connections>
+                                            <action selector="previousNewsItemTapped:" destination="a29-46-Ufz" id="jGe-nb-jtn"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Np5-fh-ga9"/>
-                                    <barButtonItem image="tab_news" id="YvQ-ls-vgF"/>
+                                    <barButtonItem image="tab_news" id="YvQ-ls-vgF">
+                                        <connections>
+                                            <segue destination="NML-kY-b4a" kind="unwind" unwindAction="unwindToList:" id="KOA-WS-XcG"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="c5v-X2-SS6"/>
-                                    <barButtonItem image="tool_next" id="6IS-SD-vK0"/>
+                                    <barButtonItem image="tool_next" id="6IS-SD-vK0">
+                                        <connections>
+                                            <action selector="nextNewsItemTapped:" destination="a29-46-Ufz" id="XHK-TU-Cmh"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -158,10 +173,13 @@
                     <navigationItem key="navigationItem" title="Title" id="dI2-qc-d21"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="nextBarButtonItem" destination="6IS-SD-vK0" id="A7p-xR-qNg"/>
+                        <outlet property="previousBarButtonItem" destination="pOU-z2-J1j" id="SaA-C4-7mk"/>
                         <outlet property="webView" destination="akJ-uU-sP4" id="2Oe-Vd-ThQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWI-b9-l1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NML-kY-b4a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2652" y="391"/>
         </scene>

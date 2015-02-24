@@ -32,10 +32,19 @@
 @property (nonatomic, strong) ODRefreshControl *newsItemsListRefreshControl;
 @property (nonatomic, strong) NieuwsItem *newsItemToPush;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *allReadButton;
+
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
 @end
 
 
 @implementation NieuwslijstTableViewController
+
+
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+}
 
 
 - (void)viewDidLoad
@@ -238,33 +247,42 @@
                 [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
             
             if ([self.newsItemsList count]>indexPath.row) {
-                NieuwsItem *selectedNewsItem = self.newsItemsList[indexPath.row];
-                selectedNewsItem.hasReadItem = YES;
+                //NieuwsItem *selectedNewsItem = self.newsItemsList[indexPath.row];
+                
+                //selectedNewsItem.hasReadItem = YES;
                 
                 NSArray *readItems = [[NSUserDefaults standardUserDefaults] arrayForKey:kSetting_ReadNewsItems];
-                if (readItems && (![readItems containsObject:selectedNewsItem.identifier])) {
-                    NSMutableArray *newReadItems = [NSMutableArray arrayWithArray:readItems];
-                    [newReadItems addObject:selectedNewsItem.identifier];
+                //if (readItems && (![readItems containsObject:selectedNewsItem.identifier])) {
+                    //NSMutableArray *newReadItems = [NSMutableArray arrayWithArray:readItems];
+                    //[newReadItems addObject:selectedNewsItem.identifier];
                     
                     // Save the new array into the UserDefaults for next time
-                    [[NSUserDefaults standardUserDefaults] setObject:newReadItems forKey:kSetting_ReadNewsItems];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
+                    //[[NSUserDefaults standardUserDefaults] setObject:newReadItems forKey:kSetting_ReadNewsItems];
+                    //[[NSUserDefaults standardUserDefaults] synchronize];
                     
                     // Refresh UITableView
-                    if (indexPath)
-                        [self.tableView reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
+                   // if (indexPath)
+                        //[self.tableView reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
                     
                     // Update badge count in tab bar and on application icon
-                    __block NSInteger unreadItemsCount = 0;
-                    [self.newsItemsList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                        if (!((NieuwsItem *)obj).hasReadItem)
-                            unreadItemsCount++;
-                    }];
-                    RootViewController *rootVC = (RootViewController *)self.tabBarController;
-                    [rootVC updateNewsItemBadge:unreadItemsCount];
-                }
+                    //__block NSInteger unreadItemsCount = 0;
+                    //[self.newsItemsList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                        //if (!((NieuwsItem *)obj).hasReadItem)
+                            //unreadItemsCount++;
+                   // }];
+                    //RootViewController *rootVC = (RootViewController *)self.tabBarController;
+                    //[rootVC updateNewsItemBadge:unreadItemsCount];
+                //}
                 
-                [[segue destinationViewController] setSelectedNewsItem:selectedNewsItem];
+                //[[segue destinationViewController] setNewsItemsList:self.newsItemsList];
+                //
+                //[[segue destinationViewController] setSelectedNewsItem:indexPath.row];
+                //[[segue destinationViewController] setNewsItemView:self.newsItemsList setSelectedIndex:indexPath.row ];
+                NieuwsItemDetailViewController *destViewController = segue.destinationViewController;
+                destViewController.selectedNewsItem = indexPath.row;
+                destViewController.newsItemsList=self.newsItemsList;
+                
+                
             }
         }
 }

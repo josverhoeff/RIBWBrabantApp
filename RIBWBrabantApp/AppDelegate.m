@@ -47,7 +47,7 @@
                                                                kSetting_ShowNewsItemsAsNotifications:@(-1) }];
     
     // Set background fetch interval to once a day for fetching news items
-    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:(3600*24)];
+    //[[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:(3600*24)];
     
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         // iOS 8: Register the notification types
